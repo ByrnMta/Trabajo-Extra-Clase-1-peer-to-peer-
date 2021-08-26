@@ -1,3 +1,5 @@
+package Sockets;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -20,6 +22,7 @@ public class TcpServer {
 
             while (true)
             {
+                //Receiver
                 String msgC = in.readUTF();
                 System.out.println("Client-1: "+msgC);
                 if (msgC.equals("EXIT")) {
@@ -31,7 +34,8 @@ public class TcpServer {
                     serverSocket.close();
                 }
 
-                System.out.println("Enter msg: ");
+                //Send
+                System.out.println("Add msg: ");
                 String msgS = scanner.nextLine();
                 out.writeUTF(msgS);
                 if (msgS.equals("EXIT"))

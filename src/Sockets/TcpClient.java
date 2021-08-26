@@ -1,3 +1,5 @@
+package Sockets;
+
 import javax.xml.crypto.Data;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -12,28 +14,29 @@ public class TcpClient {
 
         try
         {
-            Socket socketC = new Socket("LocalHost", 9999);
+            Socket clientSocket = new Socket("LocalHost", 9999);
             System.out.println("The connection is connected");
             Scanner scanner = new Scanner(System.in);
-            DataInputStream in = new DataInputStream(socketC.getInputStream());
-            DataOutputStream out = new DataOutputStream(socketC.getOutputStream());
+            DataInputStream in = new DataInputStream(clientSocket.getInputStream());
+            DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
 
             while(true)
             {
-                System.out.println("Enter msg: ");
+                //Send
+                System.out.println("Add msg: ");
                 String msgC = scanner.nextLine();
                 out.writeUTF(msgC);
-
                 if (msgC.equals("EXIT"))
                 {
                     System.out.println("The connection was disconnected");
                     in.close();
                     out.close();
                     scanner.close();
-                    socketC.close();
+                    clientSocket.close();
                     System.exit(0);
                 }
 
+                //ZZzReceiver
                 String msgS = in.readUTF();
                 System.out.println("Client-2: "+msgS);
                 if (msgS.equals("EXIT"))
@@ -42,7 +45,7 @@ public class TcpClient {
                     in.close();
                     out.close();
                     scanner.close();
-                    socketC.close();
+                    clientSocket.close();
                     System.exit(0);
                 }
             }
