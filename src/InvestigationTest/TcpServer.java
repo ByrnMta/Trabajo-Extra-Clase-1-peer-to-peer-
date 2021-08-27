@@ -1,4 +1,4 @@
-package Sockets;
+package InvestigationTest;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -24,7 +24,7 @@ public class TcpServer {
             {
                 //Receiver
                 String msgC = in.readUTF();
-                System.out.println("Client-1: "+msgC);
+                System.out.println("Client >>: "+msgC);
                 if (msgC.equals("EXIT")) {
                     System.out.println("The connection was disconnected");
                     in.close();
