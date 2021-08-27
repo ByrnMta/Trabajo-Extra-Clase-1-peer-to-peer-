@@ -1,4 +1,4 @@
-package Interface;
+package PTPInterface;
 
 public class BoxApp {
     public static void main(String[] args) {

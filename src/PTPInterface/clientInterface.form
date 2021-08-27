@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Interface.clientInterface">
-  <grid id="27dc6" binding="jPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="PTPInterface.clientInterface">
+  <grid id="27dc6" binding="jPanel" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="7" left="10" bottom="7" right="6"/>
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
@@ -13,14 +13,14 @@
       <grid id="ba625" binding="jSubpanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="2" left="2" bottom="2" right="2"/>
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12763584"/>
         </properties>
         <border type="none"/>
         <children>
-          <component id="303bb" class="javax.swing.JTextArea" binding="jTextarea">
+          <component id="303bb" class="javax.swing.JTextArea" binding="textArea">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
@@ -34,20 +34,21 @@
           </component>
         </children>
       </grid>
-      <component id="ee27d" class="javax.swing.JTextField" binding="jTextfield">
+      <component id="ee27d" class="javax.swing.JTextField" binding="textField">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties>
           <background color="-15461356"/>
           <foreground color="-1"/>
+          <text value=""/>
         </properties>
       </component>
-      <component id="43766" class="javax.swing.JButton" binding="jButton">
+      <component id="43766" class="javax.swing.JButton" binding="sendButton">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-16777216"/>
@@ -57,7 +58,7 @@
       </component>
       <component id="1070b" class="javax.swing.JLabel" binding="jLabel">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font size="18" style="1"/>
@@ -65,6 +66,16 @@
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="0"/>
           <text value="BOX"/>
+        </properties>
+      </component>
+      <component id="439e0" class="javax.swing.JLabel" binding="jLabelL">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="14" style="0"/>
+          <foreground color="-16777216"/>
+          <text value="Type anything and then press &quot;Send&quot; to strat"/>
         </properties>
       </component>
     </children>
