@@ -39,33 +39,40 @@ public class CS {
     public void communication(BufferedReader bufferedReader, String userName, SCThread serverThread) throws IOException {
         
         try {
-            System.out.println(">> La conexión fue establecida...(Digite E para salir...)");
+            System.out.println(">> La conexión fue establecida...(Digite Inf para solicitar información...)");
             boolean flag = true;
+
             while (flag) {
+                Scanner scan = new Scanner(System.in);
                 String message = bufferedReader.readLine();
                 String exit = new String(">> "+userName + " ha cerrado el puerto");
-                Scanner scan = new Scanner(System.in);
 
-                if (message.equals("E")) {
+                if (message.equals("Ext")) {
                     flag = false;
                     serverThread.sendMessage(exit);
                     break;
 
-                } else if (message.equals("CALC")) {
-                    System.out.println(">> Ingrese lo que se solicita a continuación...");
+                } else if (message.equals("Inf")){
+                    System.out.println("**Digite Ext para salir**");
+                    System.out.println("**Digite Calc para solicitar el cáculo**");
+
+                }else if (message.equals("Calc")) {
+                    System.out.println(">> Para realizar el cálculo ingrese lo que se solicita a continuación...\n");
                     System.out.println(">> Valor del producto...");
                     double product = scan.nextDouble();
-                    System.out.println(">> Porcentaje...");
+                    System.out.println(">> Porcentajea aplicar...");
                     double percentage = scan.nextDouble();
                     System.out.println(">> Peso del producto...");
                     double weight = scan.nextDouble();
                     double total = (product * percentage/100)+(weight*0.15);
-                    System.out.println(total);
+                    System.out.println("El monto total es de: "+total);
+                    String mont = new String("El monto total solicitado"+userName+"es de: "+total);
+                    serverThread.sendMessage(String.valueOf(mont));
 
                 } else {
                     String sms = ">"+userName+": "+message;
                     serverThread.sendMessage(sms);
-                    System.out.println(sms);
+//                    System.out.println(sms);
                 }
             }
             System.exit(0);

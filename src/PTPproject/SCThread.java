@@ -37,4 +37,6 @@ public class SCThread extends Thread {
     public Set<SC2Thread> getServerThreadThreads() {
         return serverThreadThreads;
     }
+
+//    public void sendMessage(double total) {} CAMBIO DE METODO DE CALCULO
 }
