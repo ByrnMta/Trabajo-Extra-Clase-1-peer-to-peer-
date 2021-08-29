@@ -8,6 +8,7 @@ import java.util.Set;
 public class SCThread extends Thread {
     private ServerSocket serverSocket;
     private Set<SC2Thread> serverThreadThreads = new HashSet<SC2Thread>();
+
     public SCThread(String portNumber) throws IOException {
         serverSocket = new ServerSocket(Integer.valueOf(portNumber));
     }
@@ -38,5 +39,4 @@ public class SCThread extends Thread {
         return serverThreadThreads;
     }
 
-//    public void sendMessage(double total) {} CAMBIO DE METODO DE CALCULO
 }

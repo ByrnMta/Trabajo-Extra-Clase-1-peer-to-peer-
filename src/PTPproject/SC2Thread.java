@@ -26,6 +26,7 @@ public class SC2Thread extends Thread {
             serverThread.getServerThreadThreads().remove(this);
         }
     }
+
     public PrintWriter getPrintWriter() {
         return printWriter;
     }
