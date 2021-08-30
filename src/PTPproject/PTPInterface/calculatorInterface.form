@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="PTPproject.PTPInterface.calculatorInterface">
+  <grid id="27dc6" binding="calcPanel" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-4277594"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="8985a" class="javax.swing.JTextField" binding="pvTextfield">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <font name="JetBrains Mono" size="14" style="0"/>
+          <foreground color="-1"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="45c78" class="javax.swing.JTextField" binding="pcTextfield">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <font name="JetBrains Mono" size="14" style="0"/>
+          <foreground color="-1"/>
+        </properties>
+      </component>
+      <component id="42220" class="javax.swing.JTextField" binding="pwTextfield">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <font name="JetBrains Mono" size="14" style="0"/>
+          <foreground color="-1"/>
+        </properties>
+      </component>
+      <component id="cb1e8" class="javax.swing.JLabel" binding="pwLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono" size="14" style="0"/>
+          <foreground color="-15461356"/>
+          <text value="Product weight"/>
+        </properties>
+      </component>
+      <component id="60d49" class="javax.swing.JLabel" binding="paLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono" size="14" style="0"/>
+          <foreground color="-15461356"/>
+          <text value="Percentage to apply"/>
+        </properties>
+      </component>
+      <component id="70776" class="javax.swing.JLabel" binding="pvLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono" size="14" style="0"/>
+          <foreground color="-15658735"/>
+          <text value="Product value"/>
+        </properties>
+      </component>
+      <component id="daae2" class="javax.swing.JButton" binding="calcButton">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-15592942"/>
+          <foreground color="-1"/>
+          <text value="Calculate"/>
+        </properties>
+      </component>
+      <component id="9c722" class="javax.swing.JLabel" binding="totalLabel">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono" size="18" style="3"/>
+          <foreground color="-15461356"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
